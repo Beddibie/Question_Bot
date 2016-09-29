@@ -1,0 +1,12 @@
+write 'Eddie: Hi! My name is Eddie'
+await read 'Eddie: what\'s your name?', defer name
+done = false
+while not done
+  prompt = (name + ' can you guess who I am?') + ':'
+  await read defer q
+  if (q. match /|exit|give up/)
+    write 'Eddie: Ok Nice tlking to you'
+    done = true
+  else if (q. match /robot|human|chatbot/)
+    write 'Eddie: Close... But I am human, of course.'
+  else (write 'Eddie: Good Guesswork!')
